@@ -39,14 +39,14 @@ const Productos: React.FC<ProductosProps> = ({ producto }) => {
         <Text style={{color:color.third, fontWeight:'700', fontSize:13}}>
           {producto.title}
         </Text>
-        <Text style={{textDecorationLine:'line-through', fontSize:12}}>
+        <Text style={{textDecorationLine:'line-through', fontSize:12, color:color.third}}>
           $ {producto.price}
         </Text>
-        <Text style={{fontWeight:'700'}}>
+        <Text style={{fontWeight:'700', color:color.third}}>
           $ {(producto.price - (producto.price * (producto.discountPercentage / 100))).toFixed(2)} <Text style={{color:color.primary, fontSize:11}}> {Math.round(producto.discountPercentage)}% OFF</Text>
         </Text>
         <View style={{display:'flex', flexDirection:"row", width:40, justifyContent:"space-between", left:180}}>
-          <Text style={{fontWeight:'500', fontSize:12,}}>
+          <Text style={{fontWeight:'500', fontSize:12, color:color.third}}>
             {(producto.rating).toFixed(1)}
           </Text>
           <Image

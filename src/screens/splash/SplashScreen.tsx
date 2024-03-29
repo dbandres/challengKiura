@@ -23,6 +23,7 @@ const SplashScreen = () =>{
 const styles = StyleSheet.create({
   continer:{
     flex:1,
+    backgroundColor:'#FFFFFF'
   },
   container1:{
     position:'absolute',

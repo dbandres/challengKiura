@@ -41,7 +41,7 @@ const MisPedidos = () => {
           </View>
           :
           <View style={{ flex: 1, width: '100%', justifyContent: 'flex-start', alignItems: 'center', marginTop: 10 }}>
-            <Text>
+            <Text style={{color: color.third}}>
               No hay productos en su Orden de compra.
             </Text>
           </View>

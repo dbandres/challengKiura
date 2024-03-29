@@ -91,7 +91,7 @@ console.log(product);
             <View style={globalStyles.detailInfo}>
               <View style={{ height: 70, marginTop: 20, width: "90%", justifyContent: "space-between", flexDirection: "row" }}>
                 <View style={{ justifyContent: "center" }}>
-                  <Text style={{ fontWeight: '700', fontSize: 17 }}>
+                  <Text style={{ fontWeight: '700', fontSize: 17 , color:color.third}}>
                     {product.product?.title}
                   </Text>
                   <View style={{ display: 'flex', flexDirection: 'row', marginTop: 7, alignItems: "center" }}>
@@ -99,13 +99,13 @@ console.log(product);
                       source={require('../../assets/star.png')}
                       style={{ width: 15, height: 15, marginRight: 5 }}
                     />
-                    <Text style={{ fontWeight: "800", fontSize: 14 }}>
+                    <Text style={{ fontWeight: "800", fontSize: 14, color:color.third }}>
                       {(product.product?.rating)?.toFixed(1)}
                     </Text>
                   </View>
                 </View>
                 <View style={{ width: 90, justifyContent: 'center', alignItems: "center" }}>
-                  <Text style={{ fontWeight: "800", fontSize: 14 }}>
+                  <Text style={{ fontWeight: "800", fontSize: 14, color:color.third }}>
                     {product.product?.stock} - unidades
                   </Text>
                   <Text>
@@ -117,16 +117,16 @@ console.log(product);
                 imagesRender()
               }
               <View style={{ width: '90%' }}>
-                <Text>
+                <Text style={{color:color.third}}>
                   {product.product?.description}
                 </Text>
               </View>
               <View style={{ width: '90%', height: 70, justifyContent: 'space-between', alignItems:"center", flexDirection:'row' }}>
                 <View>
-                  <Text style={{ textDecorationLine: 'line-through', fontSize: 12 }}>
+                  <Text style={{ textDecorationLine: 'line-through', fontSize: 12, color:color.third }}>
                     $ {product.product?.price}
                   </Text>
-                  <Text style={{ fontWeight: '800', fontSize: 25 }}>
+                  <Text style={{ fontWeight: '800', fontSize: 25, color:color.third }}>
                     $ {(product.product?.price - (product.product?.price * (product.product?.discountPercentage / 100))).toFixed(2)} <Text style={{ color: color.primary, fontSize: 11 }}> {Math.round(product.product?.discountPercentage)}% OFF</Text>
                   </Text>
                 </View>

@@ -4,6 +4,7 @@ import { View, TextInput, Button, StyleSheet, Alert } from 'react-native';
 import { useDispatch, useSelector } from 'react-redux';
 import { RootState } from '../../store/store';
 import { addProductoPost, postProduct } from '../../store/slice/addProduct';
+import { color } from '../../theme/theme';
 
 interface ProductForm {
   brand: string;
@@ -86,19 +87,21 @@ const Form: React.FC<categoriaProps> = ({ categoria }) => {
         placeholder="Titulo"
         value={formData.title}
         onChangeText={(text) => handleInputChange('title', text)}
-
+        placeholderTextColor={color.third}
       />
       <TextInput
         style={styles.input}
         placeholder="Marca"
         value={formData.brand}
         onChangeText={(text) => handleInputChange('brand', text)}
+        placeholderTextColor={color.third}
       />
       <TextInput
         style={styles.input}
         placeholder="Description"
         value={formData.description}
         onChangeText={(text) => handleInputChange('description', text)}
+        placeholderTextColor={color.third}
       />
       <TextInput
         style={styles.input}
@@ -106,6 +109,7 @@ const Form: React.FC<categoriaProps> = ({ categoria }) => {
         keyboardType='numeric'
         value={formData.discountPercentage}
         onChangeText={(text) => handleInputChange('discountPercentage', text)}
+        placeholderTextColor={color.third}
       />
       <TextInput
         style={styles.input}
@@ -113,6 +117,7 @@ const Form: React.FC<categoriaProps> = ({ categoria }) => {
         keyboardType='numeric'
         value={formData.price}
         onChangeText={(text) => handleInputChange('price', text)}
+        placeholderTextColor={color.third}
       />
       <TextInput
         style={styles.input}
@@ -120,6 +125,7 @@ const Form: React.FC<categoriaProps> = ({ categoria }) => {
         keyboardType='numeric'
         value={formData.rating}
         onChangeText={(text) => handleInputChange('rating', text)}
+        placeholderTextColor={color.third}
       />
       <TextInput
         style={styles.input}
@@ -127,12 +133,14 @@ const Form: React.FC<categoriaProps> = ({ categoria }) => {
         keyboardType='numeric'
         value={formData.stock}
         onChangeText={(text) => handleInputChange('stock', text)}
+        placeholderTextColor={color.third}
       />
       <TextInput
         style={styles.input}
         placeholder="Url Imagen"
         value={formData.thumbnail}
         onChangeText={(text) => handleInputChange('thumbnail', text)}
+        placeholderTextColor={color.third}
       />
       <Button title="Enviar" onPress={handleSubmit} />
     </View>
@@ -154,6 +162,7 @@ const styles = StyleSheet.create({
     borderRadius: 5,
     marginBottom: 10,
     paddingHorizontal: 10,
+    color:color.third
   },
 });
 

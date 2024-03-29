@@ -52,7 +52,7 @@ const Vender = () => {
       <View>
         {
           nuevoProducto.newProducto !== null ?
-            <Text style={{ paddingHorizontal: 10, paddingVertical: 10 }}>
+            <Text style={{ paddingHorizontal: 10, paddingVertical: 10, color:color.third }}>
               Mis productos:
             </Text>
             :
@@ -74,7 +74,7 @@ const Vender = () => {
       </View>
       {
         select === false ?
-          <Text style={{ paddingHorizontal: 10, paddingVertical: 10 }}>
+          <Text style={{ paddingHorizontal: 10, paddingVertical: 10,  color:color.third}}>
             Elija la categoria:
           </Text>
           : null
@@ -141,6 +141,7 @@ const styles = StyleSheet.create({
   text: {
     fontSize: 10,
     fontWeight: '500',
+    color:color.third
   },
   btnContaines: {
     backgroundColor: color.second,

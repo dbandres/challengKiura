@@ -6,7 +6,7 @@ import {
   img01, img02, img03, img04, img05, img06, img07, img08, img09, img10, img11, img12
   , img13, img14, img15, img16, img17, img18, img19, img20
 } from "../../assets/categories/png/index"
-import { color } from "../../theme/theme";
+import { color } from '../../theme/theme';
 import { useState } from "react";
 import { fetchCategoryProducts, fetchProducts } from "../../store/slice/getProductsSlice";
 
@@ -40,11 +40,11 @@ const CarouselCategories = () => {
   return (
     <View style={{ height: 130, justifyContent: 'center', alignItems: 'center' }}>
       <View style={{ height: 30, width: '90%', justifyContent: "space-between", display: "flex", flexDirection: "row" }}>
-        <Text>
+        <Text style={{color:color.third}}>
           Categorias
         </Text>
         <TouchableOpacity onPress={resetFilter} disabled={!select}>
-          <Text>
+          <Text style={{color:color.third}}>
             Ver todo
           </Text>
         </TouchableOpacity>
@@ -58,7 +58,7 @@ const CarouselCategories = () => {
                   source={imagesArray[index]}
                   style={{ width: 35, height: 35 }}
                 />
-                <Text style={{ fontSize: 10, fontWeight: '500' }}>
+                <Text style={{ fontSize: 10, fontWeight: '500', color:color.third }}>
                   {categorie}
                 </Text>
               </TouchableOpacity>
@@ -70,7 +70,7 @@ const CarouselCategories = () => {
                   source={imagesArray[indice]}
                   style={{ width: 35, height: 35 }}
                 />
-                <Text style={{ fontSize: 10, fontWeight: '500' }}>
+                <Text style={{ fontSize: 10, fontWeight: '500' , color:color.third}}>
                   {categories[indice]}
                 </Text>
               </TouchableOpacity>
