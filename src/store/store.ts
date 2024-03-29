@@ -15,25 +15,18 @@ export const store = configureStore({
   },
 })
 
-// Infer the `RootState` and `AppDispatch` types from the store itself
-/* export type RootState = ReturnType<typeof store.getState> */
-// Inferred type: {posts: PostsState, comments: CommentsState, users: UsersState}
 export type AppDispatch = typeof store.dispatch
 
-// Define el tipo RootState combinando los tipos de estado de cada slice
 export type RootState = {
   categories: CategoryState;
   addProducto: ProductsState;
   postProducto: AddProductState
-  // Agrega otros tipos de estado aquí según tus slices
 };
 
-// Combina los reducers de cada slice en un reducer raíz
 const rootReducer = combineReducers({
   categories: categoryReducer,
   addProducto: addProductReducer,
   postProduct: postProductReduce
-  // Agrega otros reducers aquí
 });
 
 export default rootReducer;

@@ -5,7 +5,6 @@ interface Products {
   id: number;
   title: string;
   price: number;
-  // Otros campos si los tienes
 }
 
 export interface ProductsState {
@@ -124,7 +123,6 @@ const productsSlice = createSlice({
   },
 });
 
-// Exportar acciones y selector si es necesario
 export const productActions = productsSlice.actions;
 export const productReducer = productsSlice.reducer;
 export const getProducts = (state: { products: ProductsState }) => state.products;

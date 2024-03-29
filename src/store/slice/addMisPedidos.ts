@@ -53,7 +53,6 @@ const productsSlice = createSlice({
     removeAll: (state, action) =>{
       state.products = []
     }
-    // Agrega otros reducers aquí según sea necesario
   }
 });
 

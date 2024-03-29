@@ -67,7 +67,6 @@ const productSlice = createSlice({
   },
 });
 
-// Exportar acciones y selector si es necesario
 export const productActions = productSlice.actions;
 export const productByIdReducer = productSlice.reducer;
 export const selectProductId = (state: { product: ProductIdState }) => state.product;

@@ -51,7 +51,7 @@ const categorySlice = createSlice({
   },
 });
 
-// Exportar acciones y selector si es necesario
+
 export const categoryActions = categorySlice.actions;
 export const categoryReducer = categorySlice.reducer;
 export const selectAllCategories = (state: { categories: CategoryState }) => state.categories.categories;

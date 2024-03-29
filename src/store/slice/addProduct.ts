@@ -38,7 +38,6 @@ export const postProduct = createAsyncThunk(
       if (!response.ok) {
         throw new Error('Failed to add product');
       }
-      // Puedes devolver cualquier dato que quieras del servidor
       const data = await response.json();
 
       const numericFields = ['discountPercentage', 'id', 'price', 'rating', 'stock'];
@@ -51,7 +50,6 @@ export const postProduct = createAsyncThunk(
       };
       return transformedData;
     } catch (error) {
-      // Si hay un error, lo manejamos aquí
       throw new Error('Failed');
     }
   }
